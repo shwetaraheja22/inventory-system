@@ -118,15 +118,22 @@ function UpdatePage() {
                       }
                     />
                   </div>
-                  <button className=" attractive-button btn w-10" onClick={handleUpdate}>
+                  <button className="attractive-button btn w-10" onClick={handleUpdate}>
                     ✅ Update Product
                   </button>
                   {message && (
                     <div className="alert mt-3 text-center alert-info">{message}</div>
                   )}
                 </>
-              ) : (
-                <div className="alert alert-danger text-center">{message}</div>
+                ) : (
+                    <>
+                <div className="alert alert-info text-center">
+                {message}
+                </div>
+                    <button className=" attractive-button btn w-10 d-flex justify-content-center mx-auto" onClick={() => navigate('/update')}>
+                    🔄 Go Back
+                      </button>
+                </>
               )}
             </div>
           ) : (
@@ -145,7 +152,7 @@ function UpdatePage() {
                 </button>
               </div>
               {message && (
-                <div className="alert mt-3 text-center alert-danger">{message}</div>
+                <div className="alert mt-3 text-center alert-info">{message}</div>
               )}
             </>
           )}

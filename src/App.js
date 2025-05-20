@@ -95,7 +95,7 @@ function AppNavbar() {
                   onClick={handleLogout}
                   style={{ color: "#fff" }}
                 >
-                  Switch User
+                  Logout
                 </button>
               </li>
             </>

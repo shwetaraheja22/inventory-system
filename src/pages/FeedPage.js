@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import './customStyles.css';
 
 function InventoryFeed() {
@@ -12,7 +12,7 @@ function InventoryFeed() {
     containerCode: "Aisle"
   };
   
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     barcode: '',
     name: '',
@@ -73,7 +73,7 @@ function InventoryFeed() {
               <label className="col-sm-3 col-form-label fw-bold">{fieldLabels[field]}</label>
               <div className="col-sm-9">
                 <input
-                  type="text"
+                  type={field === 'quantity' ? 'number' : 'text'}
                   className="form-control "
                   name={field}
                   value={formData[field]}
